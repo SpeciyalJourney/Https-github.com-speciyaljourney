@@ -75,7 +75,7 @@ a { color: inherit; }
   font-size: 1.35rem !important; margin: 4px 0;
   word-break: break-word;
 }
-.guest-note { font-style: italic; font-size: .8rem !important; }
+.guest-label { font-family: "Kalam", cursive; color: var(--terra) !important; font-size: 1.25rem !important; }
 
 /* ===== Buttons & labels ===== */
 .btn {
