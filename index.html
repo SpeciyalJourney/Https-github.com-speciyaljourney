@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Speciyal Journey · Pak Iyal</title>
+  <meta name="description" content="E-Leaflet Speciyal Journey — perjalanan & purnabakti Bapak Oktria Hendrarji (Pak Iyal), Kepala KPP Pratama Jakarta Pasar Minggu. Gathering di Istana Bogor, Sabtu 31 Oktober 2026." />
+  <meta name="theme-color" content="#7a2614" />
+
+  <!-- Preview saat link dibagikan (WhatsApp, dll) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Speciyal Journey · Pak Iyal" />
+  <meta property="og:description" content="One journey, one farewell. One more milestone to achieve. — Istana Bogor, Sabtu 31 Oktober 2026" />
+  <meta property="og:image" content="assets/img/logo-speciyal.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%237a2614'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23f6ead2' font-family='Georgia' font-weight='700'%3ESJ%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Rye&family=Oswald:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Kalam:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <!-- ============ COVER ============ -->
+  <section id="cover" class="cover">
+    <div class="cover-bg" style="background-image:url('assets/img/poster-bogor.jpg')"></div>
+    <div class="cover-inner">
+      <div class="banner small">✦ E-Leaflet ✦</div>
+      <img class="cover-logo" src="assets/img/logo-speciyal.jpg" alt="Logo Warmindo Speciyal Journey" />
+      <p class="cover-sub">Purnabakti &amp; Gathering</p>
+      <h1 class="cover-title">Pak Iyal</h1>
+      <div class="guest">
+        <p>Kepada Yth.</p>
+        <p class="guest-name" id="guestName">Bapak/Ibu/Saudara/i</p>
+        <p class="guest-note">Keluarga Besar KPP Pratama Jakarta Pasar Minggu</p>
+      </div>
+      <button id="openBtn" class="btn btn-primary">✉ Buka Leaflet</button>
+    </div>
+  </section>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main" class="paper" aria-hidden="true">
+
+    <!-- HERO -->
+    <section id="home" class="hero frame">
+      <span class="corner tl">✦</span><span class="corner tr">✦</span>
+      <span class="corner bl">✦</span><span class="corner br">✦</span>
+      <div class="banner reveal">✦ Speciyal Journey ✦</div>
+      <h2 class="big-title reveal">BOGOR</h2>
+      <p class="tagline reveal" id="tagline"></p>
+      <div class="hero-photo reveal">
+        <img src="assets/img/poster-bogor.jpg" alt="Ilustrasi Bogor" />
+        <div class="stamp">
+          <span>BOGOR · 2026</span>
+          <b>✿</b>
+          <span>SPECIYAL</span>
+        </div>
+      </div>
+      <div class="ticket reveal">
+        <div class="ticket-count" id="hCount">H-0</div>
+        <div class="brush">Getting Closer</div>
+        <div class="pill" id="heroDate">31 OCTOBER 2026</div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-wrap">
+      <h3 class="section-title reveal">Menuju Hari Spesial</h3>
+      <div class="countdown reveal" id="countdown">
+        <div><b id="cdD">0</b><span>Hari</span></div>
+        <div><b id="cdH">0</b><span>Jam</span></div>
+        <div><b id="cdM">0</b><span>Menit</span></div>
+        <div><b id="cdS">0</b><span>Detik</span></div>
+      </div>
+      <a class="btn btn-ghost reveal" id="calBtn" target="_blank" rel="noopener">📅 Simpan ke Kalender</a>
+    </section>
+
+    <!-- BIOGRAFI -->
+    <section id="profil" class="section">
+      <div class="banner reveal">✦ Sang Nakhoda ✦</div>
+      <div class="portrait reveal">
+        <div class="portrait-frame"><img id="honoreePhoto" alt="Foto Pak Iyal" /></div>
+        <div class="portrait-badge">Purnabakti 2026</div>
+      </div>
+      <h3 class="name reveal" id="honoreeName"></h3>
+      <p class="nick reveal" id="honoreeNick"></p>
+      <p class="position reveal" id="honoreePos"></p>
+      <div class="facts reveal" id="facts"></div>
+      <div class="bio reveal" id="bio"></div>
+      <p class="meta reveal" id="birth"></p>
+      <div class="retire-card reveal">
+        <span class="ribbon">30 · 10 · 2026</span>
+        <p id="retire"></p>
+      </div>
+      <blockquote class="quote reveal" id="quote"></blockquote>
+    </section>
+
+    <!-- PERJALANAN -->
+    <section id="journey" class="section alt">
+      <div class="banner reveal">✦ Perjalanan ✦</div>
+      <h3 class="section-title reveal">Jejak Langkah Pengabdian</h3>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- ACARA & MAPS -->
+    <section id="acara" class="section">
+      <div class="banner reveal">✦ Gathering ✦</div>
+      <h3 class="section-title reveal" id="eventName"></h3>
+      <div class="event-card reveal">
+        <div class="event-date">
+          <span id="evDay"></span>
+          <b id="evDate"></b>
+          <span id="evTime"></span>
+        </div>
+        <div class="event-venue">
+          <p class="venue" id="evVenue"></p>
+          <p class="addr" id="evAddr"></p>
+          <p class="dress" id="evDress"></p>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe id="mapFrame" title="Peta lokasi" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <a class="btn btn-primary reveal" id="mapBtn" target="_blank" rel="noopener">📍 Buka Google Maps</a>
+    </section>
+
+    <!-- RUNDOWN -->
+    <section id="rundown" class="section alt">
+      <div class="banner reveal">✦ Rundown ✦</div>
+      <h3 class="section-title reveal">Susunan Acara</h3>
+      <div class="rundown" id="rundownList"></div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="section">
+      <div class="banner reveal">✦ Galeri ✦</div>
+      <h3 class="section-title reveal">Lembar Kenangan</h3>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- PENUTUP -->
+    <section class="section closing frame">
+      <span class="corner tl">✦</span><span class="corner tr">✦</span>
+      <span class="corner bl">✦</span><span class="corner br">✦</span>
+      <img class="closing-logo reveal" src="assets/img/logo-speciyal.jpg" alt="Logo Speciyal Journey" />
+      <p class="closing-text reveal" id="closing"></p>
+      <p class="brush reveal">Selamat Purnabakti</p>
+      <p class="signature reveal">Keluarga Besar<br /><b id="office"></b></p>
+      <div class="leaves reveal">🌿 ✦ 🌿</div>
+    </section>
+
+    <footer class="footer">Speciyal Journey · 2026</footer>
+  </main>
+
+  <!-- NAV & MUSIK -->
+  <nav class="bottom-nav" id="bottomNav" aria-label="Navigasi">
+    <a href="#home"><span>⌂</span>Home</a>
+    <a href="#profil"><span>☺</span>Profil</a>
+    <a href="#journey"><span>➶</span>Jejak</a>
+    <a href="#acara"><span>⚑</span>Acara</a>
+    <a href="#rundown"><span>☰</span>Rundown</a>
+  </nav>
+  <button class="music-btn" id="musicBtn" aria-label="Putar / jeda musik">♫</button>
+  <audio id="bgm" loop preload="none"></audio>
+
+  <div class="lightbox" id="lightbox" hidden><img alt="" /><p></p></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
